@@ -10,9 +10,9 @@ Static HTML, no build step. Preview locally with `python3 -m http.server` from t
 - Shared styles in `assets/css/site.css` and script in `assets/js/site.js`
 - Links and assets use root paths (`/assets/...`), so serve the site from the domain root (custom domain on GitHub Pages, Netlify, Cloudflare Pages, etc.)
 
-## To add
-- **Logo:** the header and footer use a text wordmark (`.brand` in each page). Swap it for the logo image when it's ready.
-- **Favicon:** every page already links `/assets/favicon.ico`, `/assets/favicon-32.png` and `/assets/apple-touch-icon.png`. Drop those three files into `assets/` and they'll be picked up.
+## Brand files
+- **Logo:** `assets/logo-light.png/.webp` (white lettering, transparent) is used in the dark header and footer. `assets/logo.png/.webp` keeps the original black lettering for light backgrounds. `assets/logo-icon.png` is the square badge.
+- **Favicon:** `favicon.ico` (16/32/48), `favicon-32.png` and `apple-touch-icon.png` in `assets/` are made from the square badge.
 
 ## To update later
 - Phone and email are placeholders: (480) 555-0193 and info@paradisevalleyepoxy.com
