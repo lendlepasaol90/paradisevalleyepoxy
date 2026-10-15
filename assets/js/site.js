@@ -128,7 +128,7 @@
     sublinks.forEach(function(a){ map[a.getAttribute('href').slice(1)] = a; });
     var io = new IntersectionObserver(function(entries){
       entries.forEach(function(en){
-        if (en.isIntersecting) { sublinks.forEach(function(a){ a.classList.remove('on'); }); var a = map[en.target.id]; if (a) { a.classList.add('on'); a.scrollIntoView({block:'nearest', inline:'nearest'}); } }
+        if (en.isIntersecting) { sublinks.forEach(function(a){ a.classList.remove('on'); }); var a = map[en.target.id]; if (a) { a.classList.add('on'); var bar = a.parentNode, l = a.offsetLeft, r = l + a.offsetWidth; if (l < bar.scrollLeft) bar.scrollLeft = l - 16; else if (r > bar.scrollLeft + bar.clientWidth) bar.scrollLeft = r - bar.clientWidth + 16; } }
       });
     }, {rootMargin:'-40% 0px -55% 0px'});
     Object.keys(map).forEach(function(id){ var el = document.getElementById(id); if (el) io.observe(el); });
