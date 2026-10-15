@@ -11,7 +11,7 @@ Static HTML, no build step. Preview locally with `python3 -m http.server` from t
 - Links and assets use root paths (`/assets/...`), so serve the site from the domain root (custom domain on GitHub Pages, Netlify, Cloudflare Pages, etc.)
 
 ## Brand files
-- **Logo:** `assets/logo-light.png/.webp` (white lettering, transparent) is used in the dark header and footer. `assets/logo.png/.webp` keeps the original black lettering for light backgrounds. `assets/logo-icon.png` is the square badge.
+- **Logo:** `assets/logo-light.png/.webp` (white lettering, transparent) is used in the charcoal header and footer. `assets/logo.png/.webp` keeps the original black lettering for light backgrounds. `assets/logo-icon.png` is the square badge.
 - **Favicon:** `favicon.ico` (16/32/48), `favicon-32.png` and `apple-touch-icon.png` in `assets/` are made from the square badge.
 
 ## To update later
@@ -23,3 +23,7 @@ Static HTML, no build step. Preview locally with `python3 -m http.server` from t
 - Photos are keyword-named, served as WebP with JPG fallback at 800px and 1600px (`srcset`), with descriptive alt text, width/height, and lazy loading
 - Each page has Open Graph tags and JSON-LD: LocalBusiness and WebSite on home, Service and BreadcrumbList on service pages, plus ImageGallery and FAQPage on every page
 - `sitemap.xml` (with image entries) and `robots.txt` are at the root
+
+## Theme
+- Colors are CSS variables at the top of `assets/css/site.css` (`--black` is the cool charcoal `#1E232A`).
+- Dark sections with class `photo-bg` show a photo (set inline as `--bg`) under a charcoal overlay. The overlay strength is `--shade: .7` (70%); lower it to show more of the photo.
