@@ -6,7 +6,7 @@ Static HTML, no build step. Preview locally with `python3 -m http.server` from t
 
 ## Pages
 - `index.html` (home)
-- Nine service pages, each in its own folder so URLs have no `.html` (e.g. `garage-floor-coatings-paradise-valley-az/index.html` is served at `/garage-floor-coatings-paradise-valley-az/`), linked from the Services dropdown
+- Nine service pages, each in its own folder so URLs have no `.html` (e.g. `garage-floor-coatings/index.html` is served at `/garage-floor-coatings/`), linked from the Services dropdown
 - Shared styles in `assets/css/site.css` and script in `assets/js/site.js`
 - Links and assets use root paths (`/assets/...`), so serve the site from the domain root (custom domain on GitHub Pages, Netlify, Cloudflare Pages, etc.)
 
